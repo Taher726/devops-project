@@ -1,0 +1,7 @@
+I added:
+- Auto-trigger build on Git push (GitHub Webhook): Instead of manually clicking Build Now, Jenkins can automatically start the pipeline whenever you push to GitHub.
+- HTML / CSS validation using tidy package and csslint.
+
+to do:
+- Backup / rollback folder: keep the previous version and easily rollback.
+- Deployment versioning

@@ -9,10 +9,12 @@ pipeline {
             }
         }
 
-        stage('Validate Files') {
+        stage('Validate HTML & CSS') {
             steps {
-                sh 'echo Checking HTML and CSS presence...'
-                sh 'ls -l'
+                sh 'echo Validating HTML...'
+                sh 'tidy -qe index.html'
+                sh 'echo Validatin CSS...'
+                sh 'csslint style.css || echo CSS validation warnings'
             }
         }
 
